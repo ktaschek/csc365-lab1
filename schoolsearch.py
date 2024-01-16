@@ -75,24 +75,27 @@ def query_bus(students: list, bus: str):
 
 def query_average(students: list, grade: str):
     try:
-      int(grade)
-      if int(grade) not in range(GRADES):
-          raise ValueError
-      students_in_grade = [
+        int(grade)
+        if int(grade) not in range(GRADES):
+            raise ValueError
+        students_in_grade = [
         student for student in students if student.grade == grade]
-      average = sum(student.gpa for student in students_in_grade) / \
-          len(students_in_grade)
-      print(f"{grade},{average}")
+        if len(students_in_grade) != 0:
+            average = round(sum(student.gpa for student in students_in_grade) / \
+            len(students_in_grade),2)
+            print(f"{grade},{average}")
+        else:
+            print("No students in grade")
+     
     except ValueError:
         print("Invalid Grade")
     
 
 
 def query_info(students: list):
-    students_by_grade = [
-        [student for student in students if student.grade == grade] for grade in range(GRADES)]
+    # count the number of students in each grade and print it
     for grade in range(GRADES):
-        print(f"Grade {grade}: {len(students_by_grade[grade])}")
+        print(f"Grade {grade}: {len([student for student in students if student.grade == str(grade)])}")
 
 
 def query_quit():

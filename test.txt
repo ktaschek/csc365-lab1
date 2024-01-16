@@ -64,7 +64,7 @@ S: NEMO Bus
 // TC-9
 // Tests Requirements R3, R5, E1
 // short form command name with invalid parameter, existing student
-// expected output: Invalid Query\nEnter a query:
+// expected output: Invalid Query
 
 
 S: Havir xxx
@@ -72,8 +72,7 @@ S: Havir xxx
 // TC-10
 // Tests Requirements R3, R5, E1
 // short form command name with invalid parameter, non-existing student
-// expected output: Invalid Query\nEnter a query:
-
+// expected output: Invalid Query
 
 S: Nemo xxx
 
@@ -124,43 +123,57 @@ G: 1
 G: 1
 
 // TC-17
-// Tests Requirements R3, R7
+// Tests Requirements R3, R7, E1
 // short form command, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 G: 1000
 
 // TC-18
-// Tests Requirements R3, R7
+// Tests Requirements R3, R7, E1
 // long form command, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 Grade: 1000
 
+// TC-19
+// Tests Requirements R3, R7
+// short form command, existing grade, no students
+// expected output: <Empty Line>
+
+G: 0
+
+// TC-20
+// Tests Requirements R3, R7
+// long form command, existing grade, no students
+// expected output: <Empty Line>
+
+Grade: 0
+
 #Bus Queries
 
-// TC-19
+// TC-20
 // Tests Requirements R3, R8
 // short form command, existing bus
 // expected output: SCHOENECKER,PHUONG,6,109\nFINCHMAN,MATHILDA,6,111\nBRODERSEN,HYE,3,110\nHAVIR,BOBBIE,2,108\nMASSART,ELDON,4,105\nGARTH,JOHN,1,103\nCREMEANS,RANDOLPH,6,109\nKREESE,CARRIE,6,109
 
 B: 0
 
-// TC-20
+// TC-21
 // Tests Requirements R3, R8
 // long form command, existing bus
 // expected output: SCHOENECKER,PHUONG,6,109\nFINCHMAN,MATHILDA,6,111\nBRODERSEN,HYE,3,110\nHAVIR,BOBBIE,2,108\nMASSART,ELDON,4,105\nGARTH,JOHN,1,103\nCREMEANS,RANDOLPH,6,109\nKREESE,CARRIE,6,109
 
 Bus: 0
 
-// TC-21
+// TC-22
 // Tests Requirements R3,R8
 // short form command, non-existing bus
 // expected output: <empty line>
 
 B: 1000
 
-// TC-21
+// TC-23
 // Tests Requirements R3, R8
 // long form command, non-existing bus
 // expected output: <empty line>
@@ -169,69 +182,179 @@ Bus: 1000
 
 # Grade Queries with Parameter
 
-// TC-22
+// TC-24
 // Tests Requirements R3, R9
 // short form command with short form high parameter, existing grade
 // expected output: GARTH,JOHN,3.14,FALKER,ADOLPH,0
 
 G: 1 H
 
-// TC-23
+// TC-25
 // Tests Requirements R3, R9
 // short form command with long form high parameter, existing grade
 // expected output: GARTH,JOHN,3.14,FALKER,ADOLPH,0
 
 G: 1 High
 
-// TC-24
+// TC-26
 // Tests Requirements R3, R9
 // short form command with short form low parameter, existing grade
 // expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
 
 G: 1 L
 
-// TC-25
+// TC-27
 // Tests Requirements R3, R9
 // short form command with long form low parameter, existing grade
 // expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
 
 G: 1 Low
 
-// TC-26
-// Tests Requirements R3, R9
+// TC-28
+// Tests Requirements R3, R9, E1
 // short form command with short form high parameter, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 G: 1000 H
 
-// TC-27
-// Tests Requirements R3, R9
+// TC-29
+// Tests Requirements R3, R9, E1
 // short form command with long form high parameter, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 G: 1000 High
 
-// TC-28
-// Tests Requirements R3, R9
+// TC-30
+// Tests Requirements R3, R9, E1
 // short form command with short form low parameter, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 G: 1000 L
 
-// TC-29
-// Tests Requirements R3, R9
+// TC-31
+// Tests Requirements R3, R9, E1
 // short form command with long form low parameter, non-existing grade
-// expected output: <empty line>
+// expected output: Invalid Grade
 
 G: 1000 Low
 
 # Average Queries 
 
+// TC-32
+// Tests Requirements R3, R10
+// short form command, existing grade
+// expected output: 3.00
+
+A: 1
+
+// TC-33
+// Tests Requirements R3, R10
+// long form command, existing grade
+// expected output: 3.00
+
+Average: 1
+
+// TC-34
+// Tests Requirements R3, R10, E1
+// short form command, non-existing grade
+// expected output: Invalid Grade
+
+A: 1000
+
+// TC-35
+
+// Tests Requirements R3, R10, E1
+// long form command, non-existing grade
+// expected output: Invalid Grade
+
+Average: 1000
+
+// TC-36
+// Tests Requirements R3, R10
+// short form command, existing grade, no students
+// expected output: No students in grade
+
+A: 0
+
+// TC-37
+// Tests Requirements R3, R10
+// long form command, existing grade, no students
+// expected output: No students in grade
+
+Average: 0
+
 # Info Queries
+
+// TC-38
+// Tests Requirements R3, R11
+// short form command
+// expected output: 0: 0\n1: 2\n2: 13\n3: 9\n 4: 15\n5: 5\n6: 21
+
+I
+
+// TC-39
+// Tests Requirements R3, R11
+// long form command
+// expected output: 0: 0\n1: 2\n2: 13\n3: 9\n 4: 15\n5: 5\n6: 21
+
+Info
 
 # Quit Queries
 
+// TC-40
+// Tests Requirements R3, R12
+// short form command
+// expected output: Exiting... <Quits>
+
+Q
+
+// TC-41
+// Tests Requirements R3, R12
+// long form command
+// expected output: Exiting... <Quits>
+
+Quit
+
 # Error Checking Queries
+
+# File Errors
+// TC-42
+// Tests Requirements E1
+// students.txt does not exist in the same folder as schoolsearch.py
+// expected output: Unable to find students.txt <Exits>
+
+# Format Errors
+// TC-43
+// Tests Requirements E1
+// students.txt is not in the correct format (missing comma line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+// TC-44
+// Tests Requirements E1
+// students.txt is not in the correct format (missing field line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+// TC-45
+// Tests Requirements E1
+// students.txt is not in the correct format (grade is not an integer line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+// TC-46
+// Tests Requirements E1
+// students.txt is not in the correct format (classroom is not an integer line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+// TC-47
+// Tests Requirements E1
+// students.txt is not in the correct format (bus is not an integr line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+// TC-48
+// Tests Requirements E1
+// students.txt is not in the correct format (GPA is not a float line 1)
+// expected output: Invalid format on line 1 <Exits>
+
+
 
 
 
