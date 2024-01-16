@@ -102,21 +102,21 @@ def query_quit():
 
 def parse_query(students: list, query: str):
     tokens = query.strip().split()
-    if len(tokens) == 2 and tokens[0] in ["S", "Student"]:
+    if len(tokens) == 2 and tokens[0] in ["S:", "Student:"]:
         query_student(students, tokens[1])
-    elif len(tokens) == 3 and tokens[0] in ["S", "Student"] and tokens[2] in ["B", "Bus"]:
+    elif len(tokens) == 3 and tokens[0] in ["S:", "Student:"] and tokens[2] in ["B", "Bus"]:
         query_student(students, tokens[1], True)
-    elif len(tokens) == 2 and tokens[0] in ["T", "Teacher"]:
+    elif len(tokens) == 2 and tokens[0] in ["T:", "Teacher:"]:
         query_teacher(students, tokens[1])
-    elif len(tokens) == 2 and tokens[0] in ["G", "Grade"]:
+    elif len(tokens) == 2 and tokens[0] in ["G:", "Grade:"]:
         query_grade(students, tokens[1])
-    elif len(tokens) == 3 and tokens[0] in ["G", "Grade"] and tokens[2] in ["H", "High"]:
+    elif len(tokens) == 3 and tokens[0] in ["G:", "Grade:"] and tokens[2] in ["H", "High"]:
         query_grade(students, tokens[1], high=True)
     elif len(tokens) == 3 and tokens[0] in ["G", "Grade"] and tokens[2] in ["L", "Low"]:
         query_grade(students, tokens[1], low=True)
-    elif len(tokens) == 2 and tokens[0] in ["B", "Bus"]:
+    elif len(tokens) == 2 and tokens[0] in ["B:", "Bus:"]:
         query_bus(students, tokens[1])
-    elif len(tokens) == 2 and tokens[0] in ["A", "Average"]:
+    elif len(tokens) == 2 and tokens[0] in ["A:", "Average:"]:
         query_average(students, tokens[1])
     elif len(tokens) == 1 and tokens[0] in ["I", "Info"]:
         query_info(students)

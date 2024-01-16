@@ -1,0 +1,251 @@
+// CSC 365
+// Lab 1-a test suite
+
+#Student Queries
+
+// TC-1
+// Tests Requirements R1, R2, R3, R4
+// short form command name, existing student
+// expected output: HAVIR,BOBBIE,2,108,HAMER,GAVIN
+
+S: HAVIR
+
+// TC-2
+// Tests Requirements R3, R4
+// short form command name, non-existing student
+// expected output: <empty line>
+
+S: NEMO
+
+// TC-3
+// Tests Requirements R3, R4
+// Long form command name, existing student
+// expected output: HAVIR,BOBBIE,2,108,HAMER,GAVIN
+
+Student: HAVIR
+
+// TC-4
+// Tests Requirements R3, R4
+// Long form command name, non-existing student
+// expected output: <empty line>
+
+Student: NEMO
+
+#Student Queries with Bus Parameter
+
+// TC-5
+// Tests Requirements R3, R5
+// short form command name with short form parameter, existing student
+// expected output: HAVIR,BOBBIE,0
+
+S: HAVIR B
+
+// TC-6
+// Tests Requirements R3, R5
+// short form command name with short form parameter, non-existing student
+// expected output: <empty line>
+
+S: NEMO B
+
+// TC-7
+// Tests Requirements R3, R5
+// short form command name with long form parameter, existing student
+// expected output: HAVIR,BOBBIE,0
+
+S: HAVIR Bus
+
+// TC-8
+// Tests Requirements R3, R5
+// short form command name with long form parameter, non-existing student
+// expected output: <empty line>
+
+S: NEMO Bus
+
+// TC-9
+// Tests Requirements R3, R5, E1
+// short form command name with invalid parameter, existing student
+// expected output: Invalid Query\nEnter a query:
+
+
+S: Havir xxx
+
+// TC-10
+// Tests Requirements R3, R5, E1
+// short form command name with invalid parameter, non-existing student
+// expected output: Invalid Query\nEnter a query:
+
+
+S: Nemo xxx
+
+#Teacher Queries
+
+// TC-11
+// Tests Requirements R3, R6
+// short form command, existing teacher
+// expected output: HAMER,GAVIN
+
+T: HAMER
+
+// TC-12
+// Tests Requirements R3, R6
+// short form command, non-existing teacher
+// expected output: <empty line>
+
+T: NEMO
+
+// TC-13
+// Tests Requirements R3, R6
+// long form command, existing teacher
+// expected output: HAMER,GAVIN
+
+Teacher: HAMER
+
+// TC-14
+// Tests Requirements R3, R6
+// long form command, non-existing teacher
+// expected output: <empty line>
+
+Teacher: NEMO
+
+# Grade Queries
+
+// TC-15
+// Tests Requirements R3, R7
+// short form command, existing grade
+// expected output: SAELEE,DANILO\nGARTH,JOHN
+
+G: 1
+
+// TC-16
+// Tests Requirements R3, R7
+// long form command, existing grade
+// expected output: SAELEE,DANILO\nGARTH,JOHN
+
+G: 1
+
+// TC-17
+// Tests Requirements R3, R7
+// short form command, non-existing grade
+// expected output: <empty line>
+
+G: 1000
+
+// TC-18
+// Tests Requirements R3, R7
+// long form command, non-existing grade
+// expected output: <empty line>
+
+Grade: 1000
+
+#Bus Queries
+
+// TC-19
+// Tests Requirements R3, R8
+// short form command, existing bus
+// expected output: SCHOENECKER,PHUONG,6,109\nFINCHMAN,MATHILDA,6,111\nBRODERSEN,HYE,3,110\nHAVIR,BOBBIE,2,108\nMASSART,ELDON,4,105\nGARTH,JOHN,1,103\nCREMEANS,RANDOLPH,6,109\nKREESE,CARRIE,6,109
+
+B: 0
+
+// TC-20
+// Tests Requirements R3, R8
+// long form command, existing bus
+// expected output: SCHOENECKER,PHUONG,6,109\nFINCHMAN,MATHILDA,6,111\nBRODERSEN,HYE,3,110\nHAVIR,BOBBIE,2,108\nMASSART,ELDON,4,105\nGARTH,JOHN,1,103\nCREMEANS,RANDOLPH,6,109\nKREESE,CARRIE,6,109
+
+Bus: 0
+
+// TC-21
+// Tests Requirements R3,R8
+// short form command, non-existing bus
+// expected output: <empty line>
+
+B: 1000
+
+// TC-21
+// Tests Requirements R3, R8
+// long form command, non-existing bus
+// expected output: <empty line>
+
+Bus: 1000
+
+# Grade Queries with Parameter
+
+// TC-22
+// Tests Requirements R3, R9
+// short form command with short form high parameter, existing grade
+// expected output: GARTH,JOHN,3.14,FALKER,ADOLPH,0
+
+G: 1 H
+
+// TC-23
+// Tests Requirements R3, R9
+// short form command with long form high parameter, existing grade
+// expected output: GARTH,JOHN,3.14,FALKER,ADOLPH,0
+
+G: 1 High
+
+// TC-24
+// Tests Requirements R3, R9
+// short form command with short form low parameter, existing grade
+// expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
+
+G: 1 L
+
+// TC-25
+// Tests Requirements R3, R9
+// short form command with long form low parameter, existing grade
+// expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
+
+G: 1 Low
+
+// TC-26
+// Tests Requirements R3, R9
+// short form command with short form high parameter, non-existing grade
+// expected output: <empty line>
+
+G: 1000 H
+
+// TC-27
+// Tests Requirements R3, R9
+// short form command with long form high parameter, non-existing grade
+// expected output: <empty line>
+
+G: 1000 High
+
+// TC-28
+// Tests Requirements R3, R9
+// short form command with short form low parameter, non-existing grade
+// expected output: <empty line>
+
+G: 1000 L
+
+// TC-29
+// Tests Requirements R3, R9
+// short form command with long form low parameter, non-existing grade
+// expected output: <empty line>
+
+G: 1000 Low
+
+# Average Queries 
+
+# Info Queries
+
+# Quit Queries
+
+# Error Checking Queries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
