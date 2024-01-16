@@ -354,6 +354,16 @@ Quit
 // students.txt is not in the correct format (GPA is not a float line 1)
 // expected output: Invalid format on line 1 <Exits>
 
+# Query Errors
+
+// TC-49
+// Tests Requirements E1
+// invalid query
+// expected output: Invalid Query
+
+sadhjkaskjdhkjas:
+
+
 
 
 
