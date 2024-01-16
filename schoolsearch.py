@@ -1,5 +1,7 @@
 STUDENTS_FILE = "students.txt"
 GRADES = 7
+MAX_GPA = 4.0
+MIN_GPA = 0.0
 
 
 class Student:
@@ -40,33 +42,50 @@ def query_teacher(students: list, last_name: str):
 
 
 def query_grade(students: list, grade: str, high: bool = False, low: bool = False):
-    if high:
+    try:
+      int(grade)
+      if int(grade) not in range(GRADES):
+          raise ValueError
+      if high:
         student = max((student for student in students if student.grade ==
                       grade), key=lambda student: student.gpa)
         print(f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
-    elif low:
-        student = min((student for student in students if student.grade ==
-                      grade), key=lambda student: student.gpa)
-        print(f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
-    else:
-        for student in students:
-            if student.grade == grade:
-                print(f"{student.st_last_name},{student.st_first_name}")
+      elif low:
+          student = min((student for student in students if student.grade ==
+                        grade), key=lambda student: student.gpa)
+          print(f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
+      else:
+          for student in students:
+              if student.grade == grade:
+                  print(f"{student.st_last_name},{student.st_first_name}")
+    except ValueError:
+        print("Invalid Grade")    
 
 
 def query_bus(students: list, bus: str):
-    for student in students:
+    try:
+      int(bus)
+      for student in students:
         if student.bus == bus:
             print(
                 f"{student.st_last_name},{student.st_first_name},{student.grade},{student.classroom}")
+    except ValueError:
+        print("Invalid Bus Route")
 
 
 def query_average(students: list, grade: str):
-    students_in_grade = [
+    try:
+      int(grade)
+      if int(grade) not in range(GRADES):
+          raise ValueError
+      students_in_grade = [
         student for student in students if student.grade == grade]
-    average = sum(student.gpa for student in students_in_grade) / \
-        len(students_in_grade)
-    print(f"{grade},{average}")
+      average = sum(student.gpa for student in students_in_grade) / \
+          len(students_in_grade)
+      print(f"{grade},{average}")
+    except ValueError:
+        print("Invalid Grade")
+    
 
 
 def query_info(students: list):
@@ -120,10 +139,12 @@ def check_line(tokens: list) -> bool:
         int(tokens[4])
         # Check if gpa is a float
         float(tokens[5])
+        if float(tokens[5]) < MIN_GPA or float(tokens[5]) > MAX_GPA:
+            # Invalid gpa
+            return False
     except ValueError:
         return False
     return True
-
 
 def main():
     print(f"Opening {STUDENTS_FILE}...")
