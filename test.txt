@@ -221,9 +221,10 @@ Bus: 1000
 // TC-25
 // Tests Requirements R3, R9
 // short form command with short form high parameter, existing grade
-// expected output: GARTH,JOHN,3.14,FALKER,ADOLPH,0
+// expected output: CORKER,CARTER,3.12,HANTZ,JED,53
+//                  RAPOSE,ALONZO,3.12,HANTZ,JED,51
 
-G: 1 H
+G: 4 H
 
 // TC-26
 // Tests Requirements R3, R9

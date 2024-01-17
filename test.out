@@ -100,8 +100,9 @@ Enter a query: B: 1000
 
 Enter a query: Bus: 1000
 
-Enter a query: G: 1 H
-GARTH,JOHN,3.14,FALKER,ADOLPH,0
+Enter a query: G: 4 H
+CORKER,CARTER,3.12,HANTZ,JED,53
+RAPOSE,ALONZO,3.12,HANTZ,JED,51
 
 Enter a query: G: 1 High
 GARTH,JOHN,3.14,FALKER,ADOLPH,0

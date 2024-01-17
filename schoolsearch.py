@@ -48,19 +48,29 @@ def query_grade(students: list, grade: str, high: bool = False, low: bool = Fals
         int(grade)
         if int(grade) not in range(GRADES):
             raise ValueError
-        if high:
-            student = max((student for student in students if student.grade ==
-                          grade), key=lambda student: student.gpa)
-            print(f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
-        elif low:
-            student = min((student for student in students if student.grade ==
-                          grade), key=lambda student: student.gpa)
-            print(f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
-        else:
-            for student in students:
-                if student.grade == grade:
+        if students_in_grade := [
+            student for student in students if student.grade == grade
+        ]:
+            if high:
+                highest_gpa = max(
+                    float(student.gpa) for student in students_in_grade)
+                students_with_highest_gpa = [
+                    student for student in students_in_grade if student.gpa == str(highest_gpa)]
+                for student in students_with_highest_gpa:
+                    print(
+                        f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
+            elif low:
+                lowest_gpa = min(
+                    float(student.gpa) for student in students_in_grade)
+                students_with_lowest_gpa = [
+                    student for student in students_in_grade if student.gpa == str(lowest_gpa)]
+                for student in students_with_lowest_gpa:
+                    print(
+                        f"{student.st_last_name},{student.st_first_name},{student.gpa},{student.t_last_name},{student.t_first_name},{student.bus}")
+            else:
+                for student in students_in_grade:
                     print(f"{student.st_last_name},{student.st_first_name}")
-    except ValueError:
+    except ValueError as e:
         print("Invalid Grade")
 
 
