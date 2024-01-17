@@ -1,0 +1,185 @@
+Opening students.txt...
+Loaded students.txt
+Using test suite: test.txt
+
+Enter a query: S: HAVIR
+HAVIR,BOBBIE,2,108,HAMER,GAVIN
+
+Enter a query: S: NEMO
+
+Enter a query: Student: HAVIR
+HAVIR,BOBBIE,2,108,HAMER,GAVIN
+
+Enter a query: Student: NEMO
+
+Enter a query: S: HAVIR B
+HAVIR,BOBBIE,0
+
+Enter a query: S: NEMO B
+
+Enter a query: S: HAVIR Bus
+HAVIR,BOBBIE,0
+
+Enter a query: S: NEMO Bus
+
+Enter a query: S: Havir xxx
+Invalid query
+
+Enter a query: S: Nemo xxx
+Invalid query
+
+Enter a query: T: HAMER
+LIBRANDI,TODD
+HAVIR,BOBBIE
+SARAO,DIEDRA
+VANCOTT,MIKE
+WICINSKY,TERESE
+KOZOLA,BUSTER
+MULLINGS,LEIGHANN
+BUSSMANN,BILLY
+BERBES,DICK
+MULGREW,RANDELL
+TOWLEY,LANE
+
+Enter a query: T: NEMO
+
+Enter a query: Teacher: HAMER
+LIBRANDI,TODD
+HAVIR,BOBBIE
+SARAO,DIEDRA
+VANCOTT,MIKE
+WICINSKY,TERESE
+KOZOLA,BUSTER
+MULLINGS,LEIGHANN
+BUSSMANN,BILLY
+BERBES,DICK
+MULGREW,RANDELL
+TOWLEY,LANE
+
+Enter a query: Teacher: NEMO
+
+Enter a query: G: 1
+SAELEE,DANILO
+GARTH,JOHN
+
+Enter a query: Grade: 1
+SAELEE,DANILO
+GARTH,JOHN
+
+Enter a query: G: 1000
+Invalid Grade
+
+Enter a query: Grade: 1000
+Invalid Grade
+
+Enter a query: G: 0
+
+Enter a query: Grade: 0
+
+Enter a query: B: 0
+SCHOENECKER,PHUONG,6,109
+FINCHMAN,MATHILDA,6,111
+BRODERSEN,HYE,3,110
+HAVIR,BOBBIE,2,108
+MASSART,ELDON,4,105
+GARTH,JOHN,1,103
+CREMEANS,RANDOLPH,6,109
+KREESE,CARRIE,6,109
+
+Enter a query: Bus: 0
+SCHOENECKER,PHUONG,6,109
+FINCHMAN,MATHILDA,6,111
+BRODERSEN,HYE,3,110
+HAVIR,BOBBIE,2,108
+MASSART,ELDON,4,105
+GARTH,JOHN,1,103
+CREMEANS,RANDOLPH,6,109
+KREESE,CARRIE,6,109
+
+Enter a query: B: 1000
+
+Enter a query: Bus: 1000
+
+Enter a query: G: 1 H
+GARTH,JOHN,3.14,FALKER,ADOLPH,0
+
+Enter a query: G: 1 High
+GARTH,JOHN,3.14,FALKER,ADOLPH,0
+
+Enter a query: G: 1 L
+SAELEE,DANILO,2.85,FALKER,ADOLPH,54
+
+Enter a query: G: 1 Low
+SAELEE,DANILO,2.85,FALKER,ADOLPH,54
+
+Enter a query: G: 1000 H
+Invalid Grade
+
+Enter a query: G: 1000 High
+Invalid Grade
+
+Enter a query: G: 1000 L
+Invalid Grade
+
+Enter a query: G: 1000 Low
+Invalid Grade
+
+Enter a query: A: 1
+1,3.0
+
+Enter a query: Average: 1
+1,3.0
+
+Enter a query: A: 1000
+Invalid Grade
+
+Enter a query: Average: 1000
+Invalid Grade
+
+Enter a query: A: 0
+No students in grade
+
+Enter a query: Average: 0
+No students in grade
+
+Enter a query: I
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+
+Enter a query: Info
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+
+Enter a query: Q
+Exiting...
+
+Opening students.txt...
+Unable to find students.txt
+
+Opening students.txt...
+Invalid format on line 1
+
+Opening students.txt...
+Invalid format on line 1
+
+Opening students.txt...
+Invalid format on line 1
+
+Opening students.txt...
+Invalid format on line 1
+
+Opening students.txt...
+Invalid format on line 1
+
+Opening students.txt...
+Invalid format on line 1
