@@ -1,7 +1,7 @@
-Compile and Run script
+Compile and Run Program:
 
-python schoolsearch.py
+`python schoolsearch.py`
 
-Compile and Run Script with testcases
+Compile and Run Program with Testcases:
 
-python schoolsearch.py [test.txt] > [output.out]
+`python schoolsearch.py [test.txt] > [output.out]`
