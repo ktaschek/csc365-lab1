@@ -161,8 +161,25 @@ Enter a query: Info
 5: 0
 6: 21
 
+Opening students.txt...
+Loaded students.txt
+
 Enter a query: Q
 Exiting...
+
+Opening students.txt...
+Loaded students.txt
+
+Enter a query: Quit
+Exiting...
+
+Opening students.txt...
+Loaded students.txt
+
+Enter a query: sadhjkaskjdhkjas:
+Invalid query
+
+Enter a query:
 
 Opening students.txt...
 Unable to find students.txt

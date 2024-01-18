@@ -66,7 +66,6 @@ S: NEMO Bus
 // short form command name with invalid parameter, existing student
 // expected output: Invalid query
 
-
 S: HAVIR xxx
 
 // TC-10
@@ -236,14 +235,14 @@ G: 1 High
 // TC-26
 // Tests Requirements R3, R9
 // short form command with short form low parameter, existing grade
-// expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
+// expected output: SAELEE,DANILO,2.85,FALKER,ADOLPH,54
 
 G: 1 L
 
 // TC-28
 // Tests Requirements R3, R9
 // short form command with long form low parameter, existing grade
-// expected output: SAELEE,DANILO,3.14,FALKER,ADOLPH,54
+// expected output: SAELEE,DANILO,2.85,FALKER,ADOLPH,54
 
 G: 1 Low
 
