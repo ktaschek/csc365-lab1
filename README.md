@@ -4,4 +4,4 @@ Compile and Run Program:
 
 Compile and Run Program with Testcases:
 
-`python schoolsearch.py [test.txt] > [output.out]`
+`python schoolsearch.py <test.txt>`
